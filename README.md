@@ -22,7 +22,7 @@ Swagger UI: http://127.0.0.1:8000/docs
 Tahap 1 (tanpa lock):
 ```bash
 python seed.py --reset-stok 1 --id 1
-# Linux/Mac: STOK_MODE=nolock uvicorn main:app --port 8000
+STOK_MODE=nolock uvicorn main:app --port 8000
 # Windows PowerShell: $env:STOK_MODE="nolock"; uvicorn main:app --port 8000
 python test_race.py     # terminal kedua: dua-duanya 202, stok akhir -1
 ```
